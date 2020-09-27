@@ -9,7 +9,7 @@ Script uses MySQL r39-6(also Latest Version) and foreach.
 Please edit the mysql_connect under OnFilterScriptInit
 Tables will be automatically created when script is loaded for first time.
 Load the Script along with the gamemode.(No /rcon loadfs bla bla).
-  Script will print a console message after 10 seconds of server start that "Server Information Has been Updated/Inserted"
+  Script will print a console message after 4 seconds of server start that "Server Information Has been Updated/Inserted"
   which means it's succcess.
 
 Issues regarding Script? You can contact me at Discord: Oblivion#6693
@@ -72,7 +72,7 @@ public OnFilterScriptInit()
     
     ServerInfo[onlineplayers] = 0; 
 
-    SetTimer("ExecuteQuery", 10000, false); // execute query after 10 seconds (For gameemode to load and get data from it)
+    SetTimer("ExecuteQuery", 5000, false); // execute query after 5 seconds (For gameemode to load and get data from it)
     return 1;
 }
 
